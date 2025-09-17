@@ -1,8 +1,9 @@
+
 .section_parts{
     height: 100vh;
     width: 100vw;
     position: relative;
-    background-color: #00695c;
+    background-color:black;
 }
 
 #name{
@@ -21,12 +22,49 @@
     padding: 30px 10px 10px 30px;
     margin-bottom: 0;
     margin-top: 0;
+    font-family: "JetBrains Mono", monospace;
+}
+
+
+.nav-cards a>span{
+    display: inline-block;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 40px;
+    font-weight: bold;
+}
+.nav-cards a div div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    overflow: hidden;
+}
+
+.nav-cards a div div span{
+    display: block;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 25px;
+    animation: moveUp 2s linear infinite alternate;
+    margin: 10px 0;
+
+}
+@keyframes moveUp {
+    0% {
+        transform: translateY(20%);
+
+    }
+    100% {
+        transform: translateY(-100%);
+
+    }
 }
 
 #name p{
     font-size: 1.2vw;
-    padding: 7px 0 10px 30px;
+    padding: 7px 0 10px 35px;
     margin-top: 0;
+    font-family: "Rock Salt", cursive;
 }
 
 .card {
@@ -42,6 +80,19 @@
     right: 4.2vw;
     width: 10.4vw;
     height: 53.3vh;
+    position: absolute;
+}
+
+#about_card_overlay{
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: gray;
+    right: -30px;
+    bottom: 30px;
+}
+#about_span{
+    padding: 40px 50px 10px 40px;
 }
 
 
@@ -52,12 +103,36 @@
     height: 40.3vh;
 }
 
+#work_card_overlay{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: gray;
+    left: -75px;
+    top: 50px;
+}
+
+#work_span{
+    padding: 320px 50px 10px 350px;
+
+    font-weight: bold;
+}
+
 
 #skills_card {
     bottom: 2.8vh;
     left: 2.6vw;
     width: 24vw;
     height: 32.4vh;
+}
+
+#skills_card_overlay{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: gray;
+    right: -30px;
+    top: 50px;
 }
 
 
@@ -68,10 +143,32 @@
     height: 16.7vh;
 }
 
+#gallery_card_overlay{
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    background: gray;
+    right: -30px;
+    top: 50px;
+}
+
 
 #contact_card {
     bottom: 2.8vh;
     right: 4.2vw;
     width: 24vw;
     height: 14.8vh;
+}
+
+#contact_card_overlay{
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    background: gray;
+    right: -30px;
+    top: 30px;
+}
+
+#contact_span{
+    padding-top: 96px;
 }

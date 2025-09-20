@@ -102,8 +102,10 @@ body{
 .nav-cards a>span{
     display: inline-block;
     font-family: "JetBrains Mono", monospace;
-    font-size: 40px;
+    font-size: 3rem;
     font-weight: bold;
+    line-height: 1;
+    vertical-align: middle;
 }
 .nav-cards a div div{
     display: flex;
@@ -172,7 +174,6 @@ body{
     right: 4.2vw;
     width: 10.4vw;
     height: 53.3vh;
-    position: absolute;
 }
 
 #about_card_overlay{
@@ -253,7 +254,6 @@ body{
     display: flex;
     align-items: flex-end;  /* move text to bottom */
     justify-content: center;
-    padding: 20px;
 }
 
 #contact_card_overlay{
@@ -268,6 +268,133 @@ body{
 #contact_span{
     padding-top: 96px;
 }
+
+@media all and (max-width: 480px) {
+
+    #hero{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    #name{
+        position: static;
+        width: 100%;
+        height: 20vh; /* 20% of viewport height instead of px */
+    }
+
+    #name h1{
+        font-size: 10vw;
+    }
+    #name p{
+        font-size: 4vw;
+    }
+
+
+    .nav-cards{
+        position: relative;
+        display: grid;
+        grid-template-columns: 46vw 46vw; /* 220px ≈ 46vw on 480px width screen */
+        grid-template-rows: 46vw 46vw 46vw; /* same for height */
+        width: 100%;
+        height: 80vh; /* 80% of viewport height */
+        gap: 2vw; /* 10px ≈ 2vw */
+        margin: 3vw; /* 15px ≈ 3vw */
+    }
+
+    .card{
+        position: static;
+        width: auto;
+        height: auto;
+        padding: 0;
+        margin: 0;
+    }
+
+    #work_card{
+        width: 46vw;
+        height: 46vw;
+    }
+    #work_span{
+        width: 0;
+        height: 0;
+        visibility: hidden;
+        padding: 0;
+    }
+    #skills_card{
+        width: 46vw;
+        height: 46vw;
+    }
+    #skills_card_overlay{
+        width: 0;
+        height: 0;
+        visibility: hidden;
+        padding: 0;
+    }
+    #skill_span{
+        width: 0;
+        height: 0;
+        visibility: hidden;
+        padding: 0;
+    }
+    #about_card{
+        width: 46vw;
+        height: 46vw;
+    }
+    #about_span{
+        width: 0;
+        height: 0;
+        visibility: hidden;
+        padding: 0;
+    }
+    #contact_card{
+        width: 94vw; /* 440px ≈ 92vw */
+        height: 46vw;
+    }
+    #contact_span{
+        width: 0;
+        height: 0;
+        visibility: hidden;
+        padding: 0;
+    }
+    #gallery_card{
+        width: 46vw;
+        height: 46vw;
+    }
+    #gallery_span{
+        width: 0;
+        height: 0;
+        visibility: hidden;
+        padding: 0;
+    }
+
+    .overlay{
+        visibility: hidden;
+        width: 0;
+        height: 0;
+        margin: 0;
+        padding: 0;
+    }
+    .overlay{
+        position: static;
+        width: 0;
+        height: 0;
+        visibility: hidden;
+    }
+    .rotate_word_animation{
+        position: static;
+        width: 0;
+        height: 0;
+        visibility: hidden;
+        margin: 0;
+        padding: 0;
+    }
+
+}
+
+
+
+
+
 
 /*hero section css over here*/
 

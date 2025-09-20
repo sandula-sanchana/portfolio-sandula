@@ -308,6 +308,7 @@ body{
         height: auto;
         padding: 0;
         margin: 0;
+        border-radius: 13px;
     }
 
     #work_card{
@@ -317,7 +318,7 @@ body{
     #work_span{
         width: 0;
         height: 0;
-        visibility: hidden;
+        font-size: 6vw;
         padding: 0;
     }
     #skills_card{
@@ -333,7 +334,7 @@ body{
     #skill_span{
         width: 0;
         height: 0;
-        visibility: hidden;
+        font-size: 6vw;
         padding: 0;
     }
     #about_card{
@@ -343,18 +344,22 @@ body{
     #about_span{
         width: 0;
         height: 0;
-        visibility: hidden;
+        font-size: 6vw;
         padding: 0;
     }
     #contact_card{
         width: 94vw; /* 440px ≈ 92vw */
         height: 46vw;
+        display: flex;
+        align-items: center;
+        justify-content: start;
     }
     #contact_span{
         width: 0;
         height: 0;
-        visibility: hidden;
+        font-size: 6vw;
         padding: 0;
+
     }
     #gallery_card{
         width: 46vw;
@@ -363,7 +368,7 @@ body{
     #gallery_span{
         width: 0;
         height: 0;
-        visibility: hidden;
+        font-size: 6vw;
         padding: 0;
     }
 

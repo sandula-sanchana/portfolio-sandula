@@ -1,8 +1,4 @@
-body{
-    cursor: url("https://cdn.prod.website-files.com/6708f85ff3d3cba6aff436fb/671251b239d7aeb290a31ac5_cursor-default%402x.svg")
-    2 0,
-    auto;
-}
+
 :root {
     --dark-blue: #1a1e26;
     --text-color: #e0e6f3;
@@ -10,6 +6,17 @@ body{
     --link-color: #8c95a5;
     --card-background: rgba(255,255,255,0.95);
 }
+/*.glassmorphic{*/
+/*    background: rgba(255, 255, 255, 0.1); !* semi-transparent white *!*/
+/*    backdrop-filter: blur(10px);          !* frosted glass blur *!*/
+/*    -webkit-backdrop-filter: blur(10px);  !* safari support *!*/
+/*    border-radius: 20px;                  !* rounded corners *!*/
+/*    border: 1px solid rgba(255, 255, 255, 0.2); !* subtle white border *!*/
+/*    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); !* soft shadow *!*/
+/*    padding: 20px;*/
+/*    color: white; !* text stays visible *!*/
+/*}*/
+
 .section_parts{
     height: 100vh;
     width: 100vw;
@@ -23,7 +30,7 @@ body{
 }
 #hero{
     /*background: linear-gradient(135deg, #00695c, #004d40, #002f2f);*/
-    background-color: #00695c;
+    background-color:#1a1e26;
 }
 @keyframes gradientMove {
     0% { background-position: 0% 50%; }
@@ -271,27 +278,28 @@ body{
 
 @media all and (max-width: 480px) {
 
-    #hero{
+    #hero {
         display: flex;
         flex-direction: column;
         position: relative;
     }
 
-    #name{
+    #name {
         position: static;
         width: 100%;
         height: 20vh; /* 20% of viewport height instead of px */
     }
 
-    #name h1{
+    #name h1 {
         font-size: 10vw;
     }
-    #name p{
+
+    #name p {
         font-size: 4vw;
     }
 
 
-    .nav-cards{
+    .nav-cards {
         position: relative;
         display: grid;
         grid-template-columns: 46vw 46vw; /* 220px ≈ 46vw on 480px width screen */
@@ -302,90 +310,103 @@ body{
         margin: 3vw; /* 15px ≈ 3vw */
     }
 
-    .card{
+    .card {
         position: static;
         width: auto;
         height: auto;
         padding: 0;
         margin: 0;
         border-radius: 13px;
+        z-index: 4;
     }
 
-    #work_card{
+    #work_card {
         width: 46vw;
         height: 46vw;
     }
-    #work_span{
+
+    #work_span {
         width: 0;
         height: 0;
         font-size: 6vw;
         padding: 0;
     }
-    #skills_card{
+
+    #skills_card {
         width: 46vw;
         height: 46vw;
     }
-    #skills_card_overlay{
+
+    #skills_card_overlay {
         width: 0;
         height: 0;
         visibility: hidden;
         padding: 0;
     }
-    #skill_span{
+
+    #skill_span {
         width: 0;
         height: 0;
         font-size: 6vw;
         padding: 0;
     }
-    #about_card{
+
+    #about_card {
         width: 46vw;
         height: 46vw;
     }
-    #about_span{
+
+    #about_span {
         width: 0;
         height: 0;
         font-size: 6vw;
         padding: 0;
     }
-    #contact_card{
+
+    #contact_card {
         width: 94vw; /* 440px ≈ 92vw */
         height: 46vw;
         display: flex;
         align-items: center;
         justify-content: start;
     }
-    #contact_span{
+
+    #contact_span {
         width: 0;
         height: 0;
         font-size: 6vw;
         padding: 0;
 
     }
-    #gallery_card{
+
+    #gallery_card {
         width: 46vw;
         height: 46vw;
     }
-    #gallery_span{
+
+    #gallery_span {
         width: 0;
         height: 0;
         font-size: 6vw;
         padding: 0;
     }
 
-    .overlay{
+    .overlay {
         visibility: hidden;
         width: 0;
         height: 0;
         margin: 0;
         padding: 0;
     }
-    .overlay{
+
+    .overlay {
         position: static;
         width: 0;
         height: 0;
         visibility: hidden;
     }
-    .rotate_word_animation{
+
+    .rotate_word_animation {
         position: static;
         width: 0;
         height: 0;
@@ -396,10 +417,7 @@ body{
 
 }
 
-
-
-
-
+/*} media query for the mobile divices*/
 
 /*hero section css over here*/
 
@@ -409,6 +427,7 @@ body{
     background-color: var(--dark-blue);
     color: var(--text-color);
     transition: background-color 0.5s ease;
+    height: auto;
 }
 
 .container {
@@ -473,11 +492,13 @@ body{
     position: absolute;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    background-size: cover;
     background-position: center;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.5s ease;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .project-background-image.active {
     opacity: 1;
@@ -509,10 +530,64 @@ body{
     color: var(--highlight-color);
 }
 
-
-@media (max-width: 1024px) {
-    .container { grid-template-columns: 1fr; gap: 2rem; }
-    .projects-list, .projects-info { flex-direction: row; justify-content: space-between; }
-    .central-visuals { height: 300px; }
-    .project-card { width: 90%; }
+#projects_name{
+    width: 99vw;
+    height: 10vh;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
+#projects_name h3{
+    font-size: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+@media all and (max-width:480px ) {
+
+ .projects-info, .central-visuals, .project-card {
+     display: none;
+ }
+
+    #work_section{
+        width: 100vw;
+        height: auto;
+    }
+    .projects-list{
+
+    }
+
+ .container{
+     display: flex;
+     margin: 10px;
+     padding: 2rem;
+     gap: 2rem;
+     position: relative;
+     min-height: 100vh;
+     align-items: center;
+     justify-content: center;
+
+ }
+
+    .project-item {
+        cursor: pointer;
+        transition: color 0.3s ease;
+        padding: 1rem 0;
+        border-bottom: 1px solid rgba(255,255,255,0.3);
+    }
+    .project-item h2 {
+        margin: 0;
+        font-size: 50px;
+        text-align: left;
+        transition: color 0.3s ease;
+    }
+
+}
+
+

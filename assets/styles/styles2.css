@@ -276,6 +276,16 @@
     padding-top: 96px;
 }
 
+.section_parts,
+#work_section,
+#projects_name {
+    width: 100%;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
 @media all and (max-width: 480px) {
 
     #hero {
@@ -296,6 +306,14 @@
 
     #name p {
         font-size: 4vw;
+    }
+
+    #work_card_overlay,
+    #about_card_overlay,
+    #skills_card_overlay,
+    #gallery_card_overlay,
+    #contact_card_overlay {
+        display: none;
     }
 
 
@@ -531,7 +549,7 @@
 }
 
 #projects_name{
-    width: 99vw;
+    width: 100%;
     height: 10vh;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
@@ -556,7 +574,7 @@
  }
 
     #work_section{
-        width: 100vw;
+        width: 100%;
         height: auto;
     }
     .projects-list{

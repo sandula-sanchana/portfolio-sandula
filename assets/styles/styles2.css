@@ -581,6 +581,16 @@ html, body {
 
     }
 
+    .card {
+        transition: none !important;
+        transform: none !important;
+    }
+
+    .card:hover {
+        transform: none !important;
+        box-shadow: none !important;
+    }
+
  .container{
      display: flex;
      margin: 10px;

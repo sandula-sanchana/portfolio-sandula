@@ -764,10 +764,8 @@ html, body {
         background: #00796b;
         border-radius: 30px;
         display: flex;
-        justify-content: center;
-        align-items: center;
         align-self: flex-start;
-        z-index: 30;
+        border: 2px solid black;
         color: white;
     }
     #botom_bottomline div:first-child{
@@ -776,10 +774,9 @@ html, body {
         background: #00796b;
         border-radius: 30px;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        border: 2px solid black;
         align-self: flex-end;
-        z-index: 30;
+
         color: white;
     }
 
@@ -842,6 +839,34 @@ html, body {
 #about_me_div{
     background: #7b1fa2;
     border-radius: 0 0 15px 15px;
+}
+
+#top_bottomline picture,
+#top_bottomline img {
+    align-self: flex-start;
+}
+
+#top_bottomline section{
+    width: 100px;
+    height: 100px;
+    background: black;
+    border-radius:30px;
+    border: 2px solid white;
+}
+#botom_bottomline section{
+    width: 150px;
+    height: 100px;
+    padding: 20px;
+    background: black;
+    border-radius:30px;
+    border: 2px solid white;
+}
+
+#top_bottomline p,#botom_bottomline p{
+    align-self: center;
+    padding-left: 30px;
+    font-family:"Courgette", cursive;
+    font-size: 1.2rem;
 }
 
 

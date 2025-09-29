@@ -1002,18 +1002,6 @@ html, body {
     }
 }
 
-/*.marquee--vertical {*/
-/*    --mask-direction: to bottom;*/
-/*}*/
-
-/*.marquee--vertical,*/
-/*.marquee--vertical .marquee__group {*/
-/*    flex-direction: column;*/
-/*}*/
-
-/*.marquee--vertical .marquee__group {*/
-/*    animation-name: scroll-y;*/
-/*}*/
 
 .marquee--reverse .marquee__group {
     animation-direction: reverse;
@@ -1124,6 +1112,26 @@ html, body {
         transform: translateY(0);
     }
 }
+
+@media all  and (max-width: 480px) {
+
+    #skills_p{
+        max-width: 400px;
+        width: 300px;
+    }
+
+    .marquee svg{
+        width: 8rem;
+    }
+
+    #skills_div{
+        height: 30vh;
+        min-height: 30vh;
+    }
+
+}
+
+
 
 
 

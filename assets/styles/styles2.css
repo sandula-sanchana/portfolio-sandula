@@ -1132,6 +1132,118 @@ html, body {
 
 }
 
+/*gallery styles starts over here*/
+
+#gallery{
+    width: 100%;
+    height: auto;
+}
+
+.scroll-animations-example {
+    /* General container styles */
+}
+
+.scroll-animations-example > .scrollsection {
+    padding: 10vh 10vh 10vh 10vmax;
+    /* Min-width adjusted for only the large items */
+    min-width: calc(100vw + 700px);
+}
+
+.scroll-animations-example > .scrollsection > .item {
+    display: inline-block;
+    position: relative;
+    margin: 0 -30vh 0 3vh;
+    /* Vertical centering helper */
+    align-self: center;
+}
+
+.scroll-animations-example > .scrollsection > .item::before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+
+/* --- BIG IMAGE SIZES --- */
+.scroll-animations-example > .scrollsection > .item.-big {
+    height: 80vh;
+    width: 60vh;
+    z-index: 1; /* Keeping z-index for stacking */
+}
+
+.scroll-animations-example > .scrollsection > .item.-big.-horizontal {
+    height: 60vh;
+    width: 80vh;
+}
+
+/* Note: Positional offsets for normal/small items are removed here */
+
+
+/* --- IMAGE STYLING AND EFFECTS (Unchanged) --- */
+.scroll-animations-example > .scrollsection > .item > .image {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: grayscale(1);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(0) translateY(0) scale(1);
+    transition: filter .3s ease,
+    opacity 1s ease,
+    transform 1s ease;
+}
+
+/* Initial/Off-screen Transforms */
+.scroll-animations-example > .scrollsection > .item:nth-of-type(4n) > .image {
+    transform: translateX(-30vh) translateY(-30vh) scale(.8);
+    transition-delay: 1ms;
+    /*my changes on delay*/
+}
+
+.scroll-animations-example > .scrollsection > .item:nth-of-type(4n - 1) > .image {
+    transform: translateX(30vh) translateY(30vh) scale(.8);
+    transition-delay: .05s;
+}
+
+.scroll-animations-example > .scrollsection > .item:nth-of-type(4n - 2) > .image {
+    transform: translateX(-30vh) translateY(30vh) scale(.8);
+    transition-delay: .1s;
+}
+
+.scroll-animations-example > .scrollsection > .item:nth-of-type(4n - 3) > .image {
+    transform: translateX(-30vh) translateY(-30vh) scale(.8);
+    transition-delay: .15s;
+}
+
+/* Active State */
+.scroll-animations-example > .scrollsection > .item > .image.-active {
+    transform: translateX(0) translateY(0) scale(1);
+    opacity: .8;
+    pointer-events: auto;
+    transition: filter .3s ease,
+    opacity 1s ease,
+    transform 1s ease;
+}
+
+/* Clicked/Zoom State */
+.scroll-animations-example > .scrollsection > .item > .image.-clicked {
+    transform: translateX(0) translateY(0) scale(5);
+    opacity: 0;
+    pointer-events: auto;
+    transition: filter .3s ease,
+    opacity 1s ease,
+    transform 1s ease;
+}
+
+/* Hover State */
+.scroll-animations-example > .scrollsection > .item > .image.-active:hover {
+    filter: grayscale(0);
+    opacity: 1;
+    cursor: pointer;
+}
+
 
 
 

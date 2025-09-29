@@ -732,7 +732,8 @@ html, body {
         width: 400px;
         height: 400px;
         object-fit: cover;
-        transition: transform 0.3s ease; /* hover effect */
+        transition: transform 0.3s ease;
+        border: 1px solid black;/* hover effect */
 
     }
 #image_div img:hover {
@@ -888,6 +889,33 @@ html, body {
     font-size: 1.2rem;
 }
 
+#about {
+    position: relative;
+    overflow: hidden;
+}
+
+#about > p {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    font-size: clamp(1rem, 8rem, 10rem);
+    line-height: 1.2;
+    text-transform: uppercase;
+    color:#0277bd;
+    pointer-events: none;
+    font-family: "Courgette", cursive;
+    z-index: 0;
+    opacity: 0.8;
+}
+#about_me_div,
+.top_part_about_section,
+.education {
+    position: relative;
+    z-index: 1; /* keep content above background text */
+}
+
 @media all and (max-width: 480px) {
 
     #about{
@@ -905,6 +933,9 @@ html, body {
         display: flex;
         flex-direction: column;
         height: auto;
+    }
+    #about > p{
+        display: none;
     }
 
     .education{

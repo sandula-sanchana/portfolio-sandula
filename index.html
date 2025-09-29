@@ -359,10 +359,25 @@
 <section class="section_parts" id="gallery">
     <h2>#Gallery</h2>
     <div class="gallery-grid">
-        <img src="gallery/photo1.jpg" alt="Gallery 1">
-        <img src="gallery/photo2.jpg" alt="Gallery 2">
-        <img src="gallery/photo3.jpg" alt="Gallery 3">
-        <img src="gallery/photo4.jpg" alt="Gallery 4">
+        <div class='scroll-animation' data-scroll-container>
+            <div class='scrollsection' data-scroll-section>
+                <div class='item -big' data-scroll data-scroll-speed="1">
+                    <img class='image' src='https://picsum.photos/id/1019/600/800'>
+                </div>
+                <div class='item -big -horizontal' data-scroll data-scroll-speed="4">
+                    <img class='image' src='https://picsum.photos/id/1042/800/600'>
+                </div>
+                <div class='item -big' data-scroll data-scroll-speed="1">
+                    <img class='image' src='https://picsum.photos/id/1068/600/800'>
+                </div>
+                <div class='item -big' data-scroll data-scroll-speed="3">
+                    <img class='image' src='https://picsum.photos/id/1081/600/800'>
+                </div>
+                <div class='item -big' data-scroll data-scroll-speed="2">
+                    <img class='image' src='https://picsum.photos/id/137/600/800'>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -437,23 +452,6 @@
                 details.forEach(d => d.style.color = 'var(--link-color)');
             });
         });
-    });
-
-    // skills js here
-
-    /*
-JS to toggle scroll axis styles
-*/
-    const control = document.getElementById("direction-toggle");
-    const marquees = document.querySelectorAll(".marquee");
-    const wrapper = document.querySelector(".wrapper");
-
-    control.addEventListener("click", () => {
-        control.classList.toggle("toggle--vertical");
-        wrapper.classList.toggle("wrapper--vertical");
-        [...marquees].forEach((marquee) =>
-            marquee.classList.toggle("marquee--vertical")
-        );
     });
 
     //header

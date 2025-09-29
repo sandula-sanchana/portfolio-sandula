@@ -706,6 +706,7 @@ html, body {
     #about{
         width: 100%;
         height: auto;
+        background: #eee;
     }
 
     .top_part_about_section{
@@ -1130,6 +1131,7 @@ html, body {
     }
 
 }
+
 
 
 

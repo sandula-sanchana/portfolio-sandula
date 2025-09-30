@@ -6,6 +6,33 @@
     --link-color: #8c95a5;
     --card-background: rgba(255,255,255,0.95);
 }
+body{
+    cursor: none;
+}
+.cursor__ball {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #f7f8fa;
+    mix-blend-mode: difference;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 0.2s ease, width 0.2s ease, height 0.2s ease;
+    z-index: 9999999999;
+}
+
+.cursor__ball--small {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.1s ease;
+    z-index: 9999999999999;
+}
+.hoverable:hover {
+    color: red;
+}
 header{
     position: fixed;
     top: 0;
@@ -46,7 +73,7 @@ footer{
 /*    color: white; !* text stays visible *!*/
 /*}*/
 
-.section_parts{
+#hero{
     height: 100vh;
     width: 100vw;
     position: relative;
@@ -540,9 +567,9 @@ html, body {
 .projects-list {
     display: flex;
     flex-direction: column;
+    cursor: none;
 }
 .project-item {
-    cursor: pointer;
     transition: color 0.3s ease;
     padding: 1rem 0;
     border-bottom: 1px solid rgba(255,255,255,0.3);
@@ -734,6 +761,7 @@ html, body {
         object-fit: cover;
         transition: transform 0.3s ease;
         border: 1px solid black;/* hover effect */
+        cursor: pointer;
 
     }
 #image_div img:hover {

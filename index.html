@@ -18,8 +18,10 @@
 </header>
 <div id="top-anchor"></div>
 
+<div class="cursor__ball cursor__ball--big"></div>
+<div class="cursor__ball cursor__ball--small"></div>
 
-<section class="section_parts" id="hero">
+<section class="dark" id="hero">
     <div id="name">
         <h1>SANDULA SANCHANA</h1>
         <p>A Full-stack Software Engineer</p>
@@ -94,10 +96,10 @@
     </nav>
 </section>
 
-<section class="section_parts" id="work_section">
+<section class="dark" id="work_section">
     <div id="projects_name"><h3>#PROJECTS</h3></div>
 
-<div class="container">
+<div class="container dark">
     <!-- Left: Project Names -->
     <div class="projects-list">
         <div class="project-item" data-project-id="BakeTrack_id" data-image-url="assets/images/bakeT_bg.png" data-color="#2a4b87">
@@ -136,7 +138,7 @@
     </div>
 
     <!-- Right: Project Details -->
-    <div class="projects-info">
+    <div class="projects-info dark">
         <span>Java , MySQL, JavaFX</span>
         <span>HTML, CSS, JavaScript</span>
         <span>Java, css , Hibernate(ORM)</span>
@@ -147,7 +149,7 @@
 </section>
 
 
-<section class="section_parts" id="about">
+<section class="light" id="about">
 
     <div id="about_me_div"><h3>#ABOUT ME</h3></div>
     <p>sandula.sandula.sandula.sandula.sandula.sandula.sandula.
@@ -156,7 +158,7 @@
         sandula.sandula.sandula.sandula.sandula.sandula.sandula.sandula.sandula.
         sandula.sandula.sandula.sandula.sandula.sandula.sandula.sandula.sandula.</p>
     <div class="top_part_about_section">
-        <div id="image_div"><picture class="profile-img">
+        <div id="image_div" class="no-cursor"><picture class="profile-img">
             <source srcset="assets/images/personal/pfp_400px.jpg" media="(max-width: 600px)">
 <!--            <source srcset="your-photo-medium.jpg" media="(max-width: 1024px)">-->
             <img src="assets/images/personal/pfp.jpg" alt="Sandula Sanchana">
@@ -467,6 +469,60 @@
     );
 
     observer.observe(topAnchor);
+
+    // ----- Cursor elements -----
+    const bigBall = document.querySelector('.cursor__ball--big');
+    const smallBall = document.querySelector('.cursor__ball--small');
+
+    // ----- Settings -----
+    let mouseX = 0, mouseY = 0;
+    let smallX = 0, smallY = 0;
+    const speed = 0.2; // lag speed
+
+    // ----- Elements where cursor should hide -----
+    const hideElements = document.querySelectorAll('.hide-cursor');
+
+    // ----- Track mouse movement -----
+    document.addEventListener('mousemove', e => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+
+        // Move big ball instantly
+        bigBall.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
+    });
+
+    // ----- Animate small ball with lag -----
+    function animate() {
+        smallX += (mouseX - smallX) * speed;
+        smallY += (mouseY - smallY) * speed;
+        smallBall.style.transform = `translate3d(${smallX}px, ${smallY}px, 0)`;
+        requestAnimationFrame(animate);
+    }
+    animate();
+
+    // ----- Hover grow effect -----
+    const hoverElements = document.querySelectorAll('a, button, .hover-grow');
+    hoverElements.forEach(el => {
+        el.addEventListener('mouseenter', () => {
+            bigBall.classList.add('cursor--grow');
+            smallBall.classList.add('cursor--grow');
+        });
+        el.addEventListener('mouseleave', () => {
+            bigBall.classList.remove('cursor--grow');
+            smallBall.classList.remove('cursor--grow');
+        });
+    });
+
+    document.addEventListener("mouseover", e => {
+        if (e.target.closest(".no-cursor")) {
+            bigBall.style.opacity = 0;
+            smallBall.style.opacity = 0;
+        } else {
+            bigBall.style.opacity = 1;
+            smallBall.style.opacity = 1;
+        }
+    });
+
 
 </script>
 </body>

@@ -1196,8 +1196,30 @@ html, body {
 #gallery{
     width: 100%;
     height: auto;
-
+    display: flex;
+    flex-direction: column;
 }
+
+.gallery-grid-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    background: #eee;
+    margin: 50px;
+}
+
+.gallery-row {
+    display: flex;
+    gap: 10px;
+    height: 300px;
+}
+
+.gallery-item {
+    background: #0277bd;
+    flex: 1 1 0;
+}
+
 
 
 

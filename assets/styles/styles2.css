@@ -1206,6 +1206,9 @@ html, body {
     gap: 50px;
     padding: 20px;
     margin: 50px;
+    z-index: 10;
+    border: 2px solid white;
+    border-radius: 15px;
 }
 
 .gallery-row {
@@ -1216,6 +1219,9 @@ html, body {
     height: fit-content;
     max-width: 400px;
     background:#1c1c1c;
+}
+.gallery-row-3-parts{
+    gap: 50px;
 }
 .gallery-row-3-parts div:first-child{
     height: fit-content;
@@ -1250,6 +1256,49 @@ html, body {
 .bottom_row div{
     flex: 1 1 0;
     background: #4fc3f7;
+}
+
+#gallery_name{
+    width: 100%;
+    height: 10vh;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+#gallery_name h3{
+    font-size: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    font-family: "JetBrains Mono", monospace;
+    color: white;
+}
+
+#gallery {
+    position: relative;
+    overflow: hidden;
+    background: #1c1c1c;
+}
+
+#gallery > p {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    font-size: clamp(1rem, 8rem, 10rem);
+    line-height: 1.2;
+    text-transform: uppercase;
+    color:white;
+    pointer-events: none;
+    font-family: "Courgette", cursive;
+    z-index: 0;
+    opacity: 0.3;
 }
 
 

@@ -93,19 +93,19 @@ footer{
 }
 @keyframes gradient {
     0% {
-        background-position: 0% 50%;
+        background-position: 0 50%;
     }
     50% {
         background-position: 100% 50%;
     }
     100% {
-        background-position: 0% 50%;
+        background-position: 0 50%;
     }
 }
 @keyframes gradientMove {
-    0% { background-position: 0% 50%; }
+    0% { background-position: 0 50%; }
     50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    100% { background-position: 0 50%; }
 }
 
 .rotate_word_animation {
@@ -238,6 +238,7 @@ footer{
 
 .card_span{
      color: #f1f1f1;
+    font-size: clamp(1rem, 2vw, 2.5rem);
 }
 
 
@@ -286,17 +287,21 @@ footer{
     height: 53.3vh;
 }
 
-#about_card_overlay{
+#about_card_overlay {
     position: absolute;
-    width: 120px;
-    height: 120px;
-    right: -30px;
-    bottom: 30px;
+    width: 6.25vw;   /* ~120px → 6.25vw (based on 1920px screen width) */
+    height: 6.25vw;
+    right: -1.6vw;   /* ~-30px → -1.6vw */
+    bottom: 1.6vh;   /* ~30px → 1.6vh */
 }
-#about_span{
-    padding: 40px 50px 10px 40px;
+#about_span {
+    position: absolute;
+    top:2vh;
+    left: 1vw;
+    font-weight: bold;
+    padding: 0;
+    font-size: clamp(1rem, 3vw, 3rem);
 }
-
 
 #work_card {
     top: 20.4vh;
@@ -305,18 +310,21 @@ footer{
     height: 40.3vh;
 }
 
-#work_card_overlay{
+#work_card_overlay {
     position: absolute;
-    width: 200px;
-    height: 200px;
-    left: -75px;
-    top: 50px;
+    width: 10.4vw;   /* 200px → 10.4vw */
+    height: 10.4vw;
+    left: -3.9vw;    /* -75px → -3.9vw */
+    top: 2.6vh;      /* 50px → 2.6vh */
 }
 
-#work_span{
-    padding: 320px 50px 10px 320px;
-
+#work_span {
+    position: absolute;
+    bottom: 2vh;
+    right: 2vw;
     font-weight: bold;
+    padding: 0;
+    font-size: clamp(1rem, 3vw, 3rem);
 }
 
 
@@ -327,15 +335,23 @@ footer{
     height: 32.4vh;
 }
 
-#skills_card_overlay{
+#skills_card_overlay {
     position: absolute;
-    width: 200px;
-    height: 200px;
-    right: -30px;
-    top: 50px;
+    width: 10.4vw;   /* 200px → 10.4vw */
+    height: 10.4vw;
+    right: -1.6vw;   /* -30px → -1.6vw */
+    top: 2.6vh;      /* 50px → 2.6vh */
+}
+
+#skill_span{
+    position: absolute;
+    font-weight: bold;
+    padding: 0;
+    font-size: clamp(1rem, 3vw, 3rem);
 }
 
 
+/* GALLERY CARD */
 #gallery_card {
     bottom: 2.8vh;
     left: 33.3vw;
@@ -343,35 +359,57 @@ footer{
     height: 16.7vh;
 }
 
-#gallery_card_overlay{
+#gallery_card_overlay {
     position: absolute;
-    width: 130px;
-    height: 130px;
-    right: -30px;
-    top: 50px;
+    width: 7.6vw;    /* 130px → 6.8vw */
+    height: 6.8vw;
+    right: -1.6vw;   /* -30px → -1.6vw */
+    top: 2.6vh;      /* 50px → 2.6vh */
+}
+#gallery_span{
+    position: absolute;
+    font-weight: bold;
+    padding: 0;
+    font-size: clamp(1rem, 3vw, 3rem);
 }
 
 
+/* CONTACT CARD */
 #contact_card {
     bottom: 2.8vh;
     right: 4.2vw;
     width: 24vw;
     height: 14.8vh;
     display: flex;
-    align-items: flex-end;  /* move text to bottom */
-    justify-content: center;
 }
 
-#contact_card_overlay{
+#contact_card_overlay {
     position: absolute;
-    width: 140px;
-    height: 140px;
-    right: -30px;
-    top: 30px;
+    width: 7.3vw;    /* 140px → 7.3vw */
+    height: 7.3vw;
+    right: -1.6vw;   /* -30px → -1.6vw */
+    top: 1.6vh;      /* 30px → 1.6vh */
 }
 
-#contact_span{
-    padding-top: 96px;
+#contact_span {
+    position: absolute;
+    top: 14vh;
+    font-weight: bold;
+    padding: 0;
+    font-size: clamp(1rem, 3vw, 3rem);
+}
+
+.overlay span {
+    letter-spacing: 0.2vw;
+    color: white;
+    opacity: 0.9;
+    text-align: center;
+    line-height: 1.1;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.overlay:hover span {
+    transform: scale(1.05);
+    opacity: 1;
 }
 
 .section_parts,
@@ -450,6 +488,8 @@ html, body {
         height: 0;
         font-size: 6vw;
         padding: 0;
+        top: 20px;
+        left: 0;
     }
 
     #skills_card {
@@ -622,7 +662,6 @@ html, body {
     transition: opacity 0.5s ease;
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center;
 }
 .project-background-image.active {
     opacity: 1;

@@ -110,19 +110,17 @@ footer{
 
 .rotate_word_animation {
     position: absolute;
-    top: 300px;
-    left: 50px;
+    top: 28vh;
+    left: 2.2vw;
     width: fit-content;
     display: flex;
     align-items: center;
 }
 
-
-
 .rotate_word_animation h2 {
 
     display: inline-block;
-    font-size: 50px;
+    font-size: clamp(1.5rem, 2.6vw + 0.8vh, 3.2rem);
     margin-right: 20px;
     margin-left: 20px;
     color: white;
@@ -137,7 +135,7 @@ footer{
 
 .rotator span {
     display: block;
-    font-size: 50px;
+    font-size: clamp(1.5rem, 2.6vw + 0.8vh, 3.2rem);
     animation: word_rotate 4s linear infinite ;
     line-height: 50px;
     color: white;
@@ -420,6 +418,11 @@ footer{
 
 html, body {
     overflow-x: hidden;
+}
+@media only screen and (max-width: 1250px) {
+    .overlay{
+        display: none;
+    }
 }
 
 @media all and (max-width: 480px) {

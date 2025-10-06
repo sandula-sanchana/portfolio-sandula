@@ -1271,6 +1271,10 @@ html, body {
     color: white;
 }
 
+.cardX p{
+    font-family: "JetBrains Mono", monospace;
+}
+
 .cardX::before {
     content: '';
     position: absolute;

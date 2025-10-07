@@ -280,7 +280,7 @@ footer{
     top: 7.5vh;
     right: 4.2vw;
     width: 10.4vw;
-    height: 53.3vh;
+    height: 25.3vh;
 }
 
 #about_card_overlay {
@@ -1866,7 +1866,6 @@ html, body {
         width: 100%;
         max-width: 300px;
     }
-
 
 }
 

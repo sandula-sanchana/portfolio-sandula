@@ -48,6 +48,18 @@
                 </div>
             </div>
         </a>
+
+        <a href="#about" id="assignments_card" class="card">
+            <span class="card_span" id="assignments_span">#ASSIGNMENT</span>
+            <div id="assignments_card_overlay" class="overlay">
+                <div>
+                    <span>assignment</span>
+                    <span>assignment</span>
+                    <span>assignment</span>
+                </div>
+            </div>
+        </a>
+
         <a href="#work_section" id="work_card" class="card">
             <span class="card_span" id="work_span">#WORK</span>
             <div id="work_card_overlay" class="overlay">
@@ -103,23 +115,23 @@
     <!-- Left: Project Names -->
     <div class="projects-list">
         <div class="project-item" data-project-id="BakeTrack_id" data-image-url="assets/images/bakeT_bg.png" data-color="#2a4b87">
-            <h2>BAKETRACK..</h2>
+            <h2>BAKETRACK.</h2>
             <p>b2b bakery management system using java,javafx and mysql</p>
         </div>
         <div class="project-item" data-project-id="Portfolio_id" data-image-url="https://placehold.co/1200x800/3e7552/ffffff?text=Portfolio" data-color="#3e7552">
-            <h2>PORTFOLIO..</h2>
+            <h2>PORTFOLIO.</h2>
             <p>my personal website using html,css and js</p>
         </div>
         <div class="project-item" data-project-id="Student_id" data-image-url="https://placehold.co/1200x800/8c5a4d/ffffff?text=Student+Management" data-color="#8c5a4d">
-            <h2>DRIVING SCHOOL SYSTEM..</h2>
+            <h2>DRIVING SCHOOL SYSTEM.</h2>
             <p>Driving School System using hibernate technology</p>
         </div>
         <div class="project-item" data-project-id="Music_id" data-image-url="https://placehold.co/1200x800/1e2630/ffffff?text=Music+Project" data-color="#1e2630">
-            <h2>MUSIC PROJECT..</h2>
+            <h2>MUSIC PROJECT.</h2>
             <p>b2b bakery management system using java,javafx and mysql</p>
         </div>
         <div class="project-item" data-project-id="Game_id" data-image-url="https://placehold.co/1200x800/4c442e/ffffff?text=Game+Project" data-color="#4c442e">
-            <h2>GAME PROJECT..</h2>
+            <h2>GAME PROJECT.</h2>
             <p>b2b bakery management system using java,javafx and mysql</p>
         </div>
     </div>
@@ -438,7 +450,7 @@
                 <div></div>
             </div>
             <div class="gallery-item" id="g2">
-                <div><img src="assets/images/personal/gallery/g7_500px.jpg"></div>
+                <div><img src="assets/images/personal/gallery/g7_500px.jpg" alt="sandula"></div>
                 <div></div>
             </div>
         </div>
@@ -463,7 +475,7 @@
         <div class="line"></div>
     </div>
     <div class="c_middle">
-        <p>I’m interested in..</p>
+        <p>I’m interested in...</p>
         <div class="tags">
             <div id="c1"><div>UI/UX Design</div></div>
                 <div id="c2"><div>Backend Development</div></div>
@@ -621,8 +633,6 @@
     let smallX = 0, smallY = 0;
     const speed = 0.4; // lag speed
 
-    // ----- Elements where cursor should hide -----
-    const hideElements = document.querySelectorAll('.hide-cursor');
 
     // ----- Track mouse movement -----
     document.addEventListener('mousemove', e => {

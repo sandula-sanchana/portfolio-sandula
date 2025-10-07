@@ -472,7 +472,6 @@ footer{
     top: 1rem;
 }
 
-
 html, body {
     overflow-x: hidden;
 }
@@ -571,7 +570,7 @@ html, body {
         align-items: center;
         justify-content: start;
     }
-    #contact_span,#assignments_span,#contact_span,#work_span,#about_span,#gallery_span{
+    #contact_span,#assignments_span,#contact_span,#work_span,#about_span,#gallery_span,#skill_span {
             width: 0;
             height: 0;
             font-size: 6vw;

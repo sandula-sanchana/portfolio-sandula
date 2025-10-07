@@ -439,6 +439,19 @@ footer{
 #projects_name {
     width: 100%;
 }
+/*gradient inside cards*/
+.card {
+    background: linear-gradient(180deg, #3d3d3d 0%, #1e1e1e 100%);
+    background-size: 200% 200%;
+    animation: gradientShift 10s ease infinite;
+}
+@keyframes gradientShift {
+    0% { background-position: 0 50%; }
+    100% { background-position: 100% 50%; }
+}
+.overlay span {
+    text-shadow: 0 0 10px rgba(255,255,255,0.3);
+}
 
 html, body {
     overflow-x: hidden;
@@ -556,6 +569,10 @@ html, body {
     .rotate_word_animation,.overlay {
         display: none;
     }
+    .cursor__ball,.cursor__ball--small {
+       display: none;
+    }
+
     @keyframes borderGlow {
         0% {
             border-color: rgba(255, 255, 255, 0.12);
@@ -918,6 +935,9 @@ html, body {
 #about_me_div{
     background: #7b1fa2;
     border-radius: 0 0 15px 15px;
+    padding: 0;
+    margin: 0;
+    top:0;
 }
 
 #top_bottomline picture,

@@ -479,7 +479,8 @@ html, body {
     #about_card_overlay,
     #skills_card_overlay,
     #gallery_card_overlay,
-    #contact_card_overlay {
+    #contact_card_overlay,
+    #assignments_card_overlay{
         display: none;
     }
 
@@ -488,11 +489,11 @@ html, body {
         position: relative;
         display: grid;
         grid-template-columns: 46vw 46vw; /* 220px ≈ 46vw on 480px width screen */
-        grid-template-rows: 46vw 46vw 46vw; /* same for height */
+        grid-template-rows: 46vw 46vw 46vw ; /* same for height */
         width: 100%;
         height: 80vh; /* 80% of viewport height */
         gap: 2.3vw; /* 10px ≈ 2vw */
-        margin: 3vw 3vw 3vw 2vw;
+        margin: 18vw 3vw 3vw 2vw;
     }
 
     .card {
@@ -503,6 +504,8 @@ html, body {
         margin: 0;
         border-radius: 13px;
         z-index: 4;
+        transition: all 0.3s ease;
+        animation: borderGlow 3s ease-in-out infinite;
     }
 
     #work_card {
@@ -510,32 +513,16 @@ html, body {
         height: 46vw;
     }
 
-    #work_span {
-        width: 0;
-        height: 0;
-        font-size: 6vw;
-        padding: 0;
-        top: 20px;
-        left: 0;
-    }
 
     #skills_card {
         width: 46vw;
         height: 46vw;
     }
 
-    #skills_card_overlay {
-        width: 0;
-        height: 0;
-        visibility: hidden;
-        padding: 0;
-    }
 
-    #skill_span {
-        width: 0;
-        height: 0;
-        font-size: 6vw;
-        padding: 0;
+    #assignments_card{
+        width: 46vw;
+        height: 23vw;
     }
 
     #about_card {
@@ -543,19 +530,22 @@ html, body {
         height: 46vw;
     }
 
-    #about_span {
-        width: 0;
-        height: 0;
-        font-size: 6vw;
-        padding: 0;
-    }
 
     #contact_card {
-        width: 94vw; /* 440px ≈ 92vw */
+        width: 46vw; /* 440px ≈ 92vw */
         height: 46vw;
         display: flex;
         align-items: center;
         justify-content: start;
+    }
+    #contact_span,#assignments_span,#contact_span,#work_span,#about_span,#gallery_span{
+            width: 0;
+            height: 0;
+            font-size: 6vw;
+            padding: 0;
+            top: 20px;
+            left: 0;
+
     }
 
     #gallery_card {
@@ -563,35 +553,19 @@ html, body {
         height: 46vw;
     }
 
-    #gallery_span {
-        width: 0;
-        height: 0;
-        font-size: 6vw;
-        padding: 0;
+    .rotate_word_animation,.overlay {
+        display: none;
     }
-
-    .overlay {
-        visibility: hidden;
-        width: 0;
-        height: 0;
-        margin: 0;
-        padding: 0;
-    }
-
-    .overlay {
-        position: static;
-        width: 0;
-        height: 0;
-        visibility: hidden;
-    }
-
-    .rotate_word_animation {
-        position: static;
-        width: 0;
-        height: 0;
-        visibility: hidden;
-        margin: 0;
-        padding: 0;
+    @keyframes borderGlow {
+        0% {
+            border-color: rgba(255, 255, 255, 0.12);
+        }
+        50% {
+            border-color: rgba(0, 255, 136, 0.5);
+        }
+        100% {
+            border-color: rgba(255, 255, 255, 0.12);
+        }
     }
 
 }

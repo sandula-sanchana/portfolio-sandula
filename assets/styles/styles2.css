@@ -267,9 +267,10 @@ footer{
 #work_card_overlay,
 #skills_card_overlay,
 #gallery_card_overlay,
-#contact_card_overlay {
+#contact_card_overlay,
+#assignments_card_overlay {
     background: rgba(255, 255, 255, 0.05);
-    /*border-right: 2px solid white;*/
+    overflow: hidden;
     border: 2px solid white;
     backdrop-filter: blur(12px);
     border-radius: 0 20px 0 0;
@@ -298,6 +299,31 @@ footer{
     padding: 0;
     font-size: clamp(1rem, 3vw, 3rem);
 }
+
+#assignments_card {
+    top: 45vh;
+    right: 4.2vw;
+    width: 10.4vw;
+    height: 15.3vh;
+}
+#assignments_card_overlay{
+    position: absolute;
+    width: 6vw;   /* ~120px → 6.25vw (based on 1920px screen width) */
+    height: 6vw;
+    right: -1vw;   /* ~-30px → -1.6vw */
+    bottom: -3vh;
+}
+#assignments_card_overlay span{
+    font-size: .8rem;
+}
+#assignments_span{
+    position: absolute;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    font-size: clamp(1rem, 3vw, 2rem);
+}
+
 
 #work_card {
     top: 20.4vh;

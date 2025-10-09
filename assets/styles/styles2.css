@@ -130,8 +130,8 @@ footer{
     margin: auto;
     left: 0;
     bottom: 0;
-    width: 700.4px;
-    height: 700.4px;
+    width: 700px;
+    height: 700px;
     --clr: #ff4da6;
     --clr-alpha: rgba(255, 77, 166, 0.1);
     animation: spinner 1.6s infinite ease;
@@ -146,7 +146,7 @@ footer{
     height: 100%;
     position: absolute;
     width: 100%;
-    border: 3.5px solid var(--clr);
+    border: 4px solid var(--clr);
 }
 
 .spinner div:nth-of-type(1) {
@@ -174,7 +174,7 @@ footer{
 }
 
 .spinner div:nth-of-type(6) {
-    transform: translateZ(35.2px);
+    transform: translateZ(35px);
 }
 
 @keyframes spinner {
@@ -613,8 +613,8 @@ html, body {
         margin: auto;
         left: 0;
         bottom: 0;
-        width: 600.4px;
-        height: 600.4px;
+        width: 600px;
+        height: 600px;
         display: flex !important;
         --clr:red;
         --clr-alpha: rgb(247, 197, 159,.1);
@@ -627,7 +627,7 @@ html, body {
         height: 100%;
         position: absolute;
         width: 100%;
-        border: 3.5px solid var(--clr);
+        border: 4px solid var(--clr);
     }
 
     .spinner div:nth-of-type(1) {
@@ -655,7 +655,7 @@ html, body {
     }
 
     .spinner div:nth-of-type(6) {
-        transform: translateZ(35.2px);
+        transform: translateZ(35px);
     }
 
     @keyframes spinner {
@@ -702,6 +702,9 @@ html, body {
         padding: 0;
         overflow: visible;
 
+    }
+    .nav-cards{
+        display: none;!important;
     }
 
     /* CARD STYLING */
@@ -982,7 +985,7 @@ html, body {
     #about{
         width: 100%;
         height: auto;
-        background: #eee;
+        background: #1c1c1c;
     }
 
     .top_part_about_section{
@@ -1025,13 +1028,14 @@ html, body {
         min-height: 50vh;
         border-radius: 15px;
         border: 1px solid black;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        /*box-shadow: 0 4px 15px rgba(0,0,0,0.3);*/
         padding: 0 clamp(1rem, 5vw, 6rem);
         font-family: "Patrick Hand", cursive;
         font-size: clamp(1rem, 2vw, 2rem);
-        background: #7b1fa2;
-        color: white;
         scroll-behavior: smooth;
+        background: #2c2c2c;
+        color: #e0e0e0;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     }
 
     .top_part_about_section h1{
@@ -1090,6 +1094,22 @@ html, body {
 #botom_bottomline div:first-child {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+#top_bottomline div:first-child,
+#botom_bottomline div:first-child {
+    background: #333333;
+    border: 2px solid #444444;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#top_bottomline div:first-child:hover,
+#botom_bottomline div:first-child:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(123,31,162,0.5); /* subtle purple glow */
+}
+
+#about > p {
+    color: rgba(255,255,255,0.05); /* background decorative text */
+}
 
 #top_bottomline div:first-child:hover,
 #botom_bottomline div:first-child:hover {
@@ -1134,7 +1154,6 @@ html, body {
 }
 
 #about_me_div{
-    background: #7b1fa2;
     border-radius: 0 0 15px 15px;
     padding: 0;
     margin: 0;

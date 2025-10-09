@@ -77,6 +77,7 @@ footer{
     width: 100vw;
     position: relative;
     background-size: 400% 400%;
+    overflow: hidden;
     /*animation: gradientMove 12s ease infinite;*/
 }
 
@@ -115,10 +116,79 @@ footer{
     width: fit-content;
     display: flex;
     align-items: center;
+    z-index: 1;
 }
 
-.spinner{
-    display: none;
+/*.spinner{*/
+/*    display: none;*/
+/*}*/
+
+.spinner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: auto;
+    left: 0;
+    bottom: 0;
+    width: 700.4px;
+    height: 700.4px;
+    --clr: #ff4da6;
+    --clr-alpha: rgba(255, 77, 166, 0.1);
+    animation: spinner 1.6s infinite ease;
+    transform-style: preserve-3d;
+    z-index: 0;
+    /*--clr: #00d4ff;         !* cyan/blue *!*/
+    /*--clr-alpha: rgba(0, 212, 255, 0.1);*/
+}
+
+.spinner > div {
+    background-color: var(--clr-alpha);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    border: 3.5px solid var(--clr);
+}
+
+.spinner div:nth-of-type(1) {
+    transform: translateZ(-35.2px) rotateY(180deg);
+}
+
+.spinner div:nth-of-type(2) {
+    transform: rotateY(-270deg) translateX(50%);
+    transform-origin: top right;
+}
+
+.spinner div:nth-of-type(3) {
+    transform: rotateY(270deg) translateX(-50%);
+    transform-origin: center left;
+}
+
+.spinner div:nth-of-type(4) {
+    transform: rotateX(90deg) translateY(-50%);
+    transform-origin: top center;
+}
+
+.spinner div:nth-of-type(5) {
+    transform: rotateX(-90deg) translateY(50%);
+    transform-origin: bottom center;
+}
+
+.spinner div:nth-of-type(6) {
+    transform: translateZ(35.2px);
+}
+
+@keyframes spinner {
+    0% {
+        transform: rotate(45deg) rotateX(-25deg) rotateY(25deg);
+    }
+
+    50% {
+        transform: rotate(45deg) rotateX(-385deg) rotateY(25deg);
+    }
+
+    100% {
+        transform: rotate(45deg) rotateX(-385deg) rotateY(385deg);
+    }
 }
 
 .rotate_word_animation h2 {
@@ -168,6 +238,7 @@ footer{
     font-size: 2vw;
     width: fit-content;
     height: fit-content;
+    z-index: 1;
 }
 
 #name h1{
@@ -528,10 +599,77 @@ html, body {
         align-items: center;
         justify-content: center;
         text-align: center;
+        z-index: 1000;
     }
 
     #name h1 {
         font-size: 10vw;
+    }
+
+    .spinner {
+        position: absolute;
+        top: 100px;
+        right: 0;
+        margin: auto;
+        left: 0;
+        bottom: 0;
+        width: 600.4px;
+        height: 600.4px;
+        display: flex !important;
+        --clr:red;
+        --clr-alpha: rgb(247, 197, 159,.1);
+        animation: spinner 1.6s infinite ease;
+        transform-style: preserve-3d;
+    }
+
+    .spinner > div {
+        background-color: var(--clr-alpha);
+        height: 100%;
+        position: absolute;
+        width: 100%;
+        border: 3.5px solid var(--clr);
+    }
+
+    .spinner div:nth-of-type(1) {
+        transform: translateZ(-35.2px) rotateY(180deg);
+    }
+
+    .spinner div:nth-of-type(2) {
+        transform: rotateY(-270deg) translateX(50%);
+        transform-origin: top right;
+    }
+
+    .spinner div:nth-of-type(3) {
+        transform: rotateY(270deg) translateX(-50%);
+        transform-origin: center left;
+    }
+
+    .spinner div:nth-of-type(4) {
+        transform: rotateX(90deg) translateY(-50%);
+        transform-origin: top center;
+    }
+
+    .spinner div:nth-of-type(5) {
+        transform: rotateX(-90deg) translateY(50%);
+        transform-origin: bottom center;
+    }
+
+    .spinner div:nth-of-type(6) {
+        transform: translateZ(35.2px);
+    }
+
+    @keyframes spinner {
+        0% {
+            transform: rotate(45deg) rotateX(-25deg) rotateY(25deg);
+        }
+
+        50% {
+            transform: rotate(45deg) rotateX(-385deg) rotateY(25deg);
+        }
+
+        100% {
+            transform: rotate(45deg) rotateX(-385deg) rotateY(385deg);
+        }
     }
 
     #name p {
@@ -563,15 +701,16 @@ html, body {
         height: 70vh;
         padding: 0;
         overflow: visible;
+
     }
 
     /* CARD STYLING */
     .card {
         position: absolute;
         border-radius: 13px;
-        z-index: 4;
         transition: all 0.3s ease;
         animation: borderGlow 3s ease-in-out infinite;
+        z-index: 1000;
     }
 
     /* INDIVIDUAL CARD POSITIONS */

@@ -78,6 +78,7 @@ footer{
     position: relative;
     background-size: 400% 400%;
     overflow: hidden;
+    /*perspective: 1000px;*/
     /*animation: gradientMove 12s ease infinite;*/
 }
 
@@ -134,7 +135,7 @@ footer{
     height: 700px;
     --clr: #ff4da6;
     --clr-alpha: rgba(255, 77, 166, 0.1);
-    animation: spinner 1.6s infinite ease;
+    animation: spinner 5s infinite ease;
     transform-style: preserve-3d;
     z-index: 0;
     /*--clr: #00d4ff;         !* cyan/blue *!*/
@@ -618,7 +619,7 @@ html, body {
         display: flex !important;
         --clr:red;
         --clr-alpha: rgb(247, 197, 159,.1);
-        animation: spinner 1.6s infinite ease;
+        animation: spinner 5s infinite ease;
         transform-style: preserve-3d;
     }
 

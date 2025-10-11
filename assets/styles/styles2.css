@@ -1111,6 +1111,22 @@ html, body {
     color: white;
 }
 
+.repo-link {
+    display: flex;
+    text-decoration: none;
+}
+
+.repo-link .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.repo-link:hover .icon svg {
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+}
+
 @media all and (max-width:480px ) {
 
     .projects-info, .central-visuals, .project-card {

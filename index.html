@@ -526,36 +526,75 @@
     <div id="gallery_name">
         <h3>#Gallery</h3>
     </div>
-    <div class="gallery-grid-wrapper"> <div class="gallery-row gallery-row-3-parts">
-        <div class="gallery-item"><img src="assets/images/personal/gallery/gallery_image1%20_400px.jpg" alt="Gallery Image 1"></div>
-        <div class="gallery-item"><img src="assets/images/personal/gallery/g_image2_400px.jpg" alt="Gallery Image 2"></div>
-        <div class="gallery-item"><img src="assets/images/personal/gallery/g_image3_400px.jpg" alt="Gallery Image 3"></div>
-        <div class="gallery-item"><img src="assets/images/personal/gallery/g4_400px.jpg" alt="Gallery Image 4"></div>
-    </div>
+
+    <div class="gallery-grid-wrapper">
+        <div class="gallery-row gallery-row-3-parts">
+            <div class="gallery-item">
+                <picture>
+                    <source media="(max-width: 480px)" srcset="assets/images/personal/gallery/gallery_image1_400px.jpg">
+                    <source media="(max-width: 1024px)" srcset="assets/images/personal/gallery/gallery_image1_400px.jpg">
+                    <img src="assets/images/personal/gallery/gallery_image1_400px.jpg" alt="Gallery Image 1">
+                </picture>
+            </div>
+
+            <div class="gallery-item">
+                <picture>
+                    <source media="(max-width: 480px)" srcset="assets/images/personal/gallery/g_image2_400px.jpg">
+                    <source media="(max-width: 1024px)" srcset="assets/images/personal/gallery/g_image2_400px.jpg">
+                    <img src="assets/images/personal/gallery/g_image2_400px.jpg" alt="Gallery Image 2">
+                </picture>
+            </div>
+
+            <div class="gallery-item">
+                <picture>
+                    <source media="(max-width: 480px)" srcset="assets/images/personal/gallery/g_image3_400px.jpg">
+                    <source media="(max-width: 1024px)" srcset="assets/images/personal/gallery/g_image3_400px.jpg">
+                    <img src="assets/images/personal/gallery/g_image3_400px.jpg" alt="Gallery Image 3">
+                </picture>
+            </div>
+
+            <div class="gallery-item">
+                <picture>
+                    <source media="(max-width: 480px)" srcset="assets/images/personal/gallery/g4_400px.jpg">
+                    <source media="(max-width: 1024px)" srcset="assets/images/personal/gallery/g4_400px.jpg">
+                    <img src="assets/images/personal/gallery/g4_400px.jpg" alt="Gallery Image 4">
+                </picture>
+            </div>
+        </div>
 
         <div class="gallery-row gallery-row-2-parts">
             <div class="gallery-item" id="g1">
-                <div></div>
-                <div></div>
+                <div class="gallery-item">
+                    <picture>
+                        <source media="(max-width: 480px)" srcset="assets/images/personal/gallery/j5_400px.jpg">
+                        <source media="(max-width: 1024px)" srcset="assets/images/personal/gallery/j5_400px.jpg">
+                        <img src="assets/images/personal/gallery/j5_400px.jpg" alt="Gallery Image 5">
+                    </picture>
+                </div>
+
+                <div class="gallery-item">
+                    <picture>
+                        <source media="(max-width: 480px)" srcset="assets/images/personal/gallery/g6_200px.jpg">
+                        <source media="(max-width: 1024px)" srcset="assets/images/personal/gallery/g6_200px.jpg">
+                        <img src="assets/images/personal/gallery/g6_400px.jpg" alt="Gallery Image 6">
+                    </picture>
+                </div>
             </div>
+
             <div class="gallery-item" id="g2">
-                <div><img src="assets/images/personal/gallery/g7_500px.jpg" alt="sandula"></div>
+                <div>
+                    <picture>
+                        <source media="(max-width: 480px)" srcset="assets/images/personal/gallery/g7_300px.jpg">
+                        <source media="(max-width: 1024px)" srcset="assets/images/personal/gallery/g7_600px.jpg">
+                        <img src="assets/images/personal/gallery/g7_1200px.jpg" alt="Sandula">
+                    </picture>
+                </div>
                 <div></div>
             </div>
         </div>
-
-        <div class="gallery-row gallery-row-5-parts">
-            <div class="gallery-item bottom_row">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-        </div>
-
     </div>
 </section>
+
 
 
 <section class="section_parts" id="contact">

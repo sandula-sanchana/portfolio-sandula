@@ -552,7 +552,7 @@ html, body {
     overflow-x: hidden;
 }
 
-@media all and (min-width: 481px) and (max-width: 820px){
+@media all and (min-width: 481px) and (max-width: 1024px){
     #work_card {
         top: 30.9vh;
         left: 50vw;
@@ -1071,6 +1071,32 @@ html, body {
         font-size: 50px;
         text-align: left;
         transition: color 0.3s ease;
+    }
+}
+
+@media all and (min-width: 481px) and (max-width: 1024px){
+    .central-visuals{
+        /*display: none;*/
+        height: 600px;
+    }
+
+    #work_section {
+        width: 100%;
+        height: auto;
+    }
+
+    .projects-list {
+
+    }
+
+    .projects-info{
+        display: none;
+    }
+}
+
+@media all and (max-width: 1024px) {
+    .projects-info{
+        display: none;
     }
 }
 
@@ -2204,7 +2230,7 @@ html, body {
 
 }
 
-@media all and (min-width: 481px) and (max-width: 820px) {
+@media all and (min-width: 481px) and (max-width: 1024px) {
 
     #contact {
         width: 100%;

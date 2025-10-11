@@ -842,6 +842,61 @@ html, body {
     transition: background-color 0.5s ease;
     height: auto;
 }
+.button-icon {
+    display: flex;
+    border: 3px #fff solid;
+    width: fit-content;
+    height: fit-content;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.icon {
+    background-color: #fff;
+    padding: 10px 10px 5px 10px;
+}
+
+.icon svg {
+    width: 25px;
+    height: 25px;
+}
+
+.cube {
+    transition: all 0.4s;
+    transform-style: preserve-3d;
+    width: 200px;
+    height: 20px;
+}
+
+.button-icon:hover .cube {
+    transform: rotateX(90deg);
+}
+
+.side {
+    position: absolute;
+    height: 47px;
+    width: 200px;
+    display: flex;
+    font-size: 0.8em;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.top {
+    background: #222229;
+    color: #fff;
+    transform: rotateX(-90deg) translate3d(0, 14px, 2em);
+}
+
+.front {
+    background: #222229;
+    color: #fff;
+    transform: translate3d(0, 0, 1em);
+}
+
 
 .container {
     display: grid;

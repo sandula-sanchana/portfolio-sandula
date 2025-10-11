@@ -124,6 +124,16 @@ footer{
 /*    display: none;*/
 /*}*/
 
+@media all and (min-width: 1025px) {
+    .social-card{
+        display: none;
+    }
+
+    .navbar{
+        display: none;
+    }
+}
+
 .spinner {
     position: absolute;
     top: 0;
@@ -626,6 +636,85 @@ html, body {
     header {
         display: none;
     }
+    .social-card {
+        position: absolute;
+        height: fit-content;
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 15px;
+        background: rgb(255, 255, 255);
+        padding: 20px 25px;
+        border-radius: 14px;
+        top: 60vh;
+    }
+    .Btn {
+        width: 35px;
+        height: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        background-color: transparent;
+        position: relative;
+        border-radius: 7px;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+
+    .svgContainer {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        backdrop-filter: blur(0px);
+        letter-spacing: 1px;
+        border-radius: 10px;
+        transition: all 0.3s;
+        border: 1px solid rgba(156, 156, 156, 0.466);
+        z-index: 2;
+    }
+
+    .BG {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #181818;
+        z-index: 1;
+        border-radius: 10px;
+        pointer-events: none;
+        transition: all 0.3s;
+        font-size: 0;
+    }
+    .github .BG {
+        background: #181818;
+    }
+    .linkdin .BG {
+        background: #0077b5;
+    }
+    .whatsapp .BG {
+        background: #075e54;
+    }
+    .discord .BG {
+        background: #7289da;
+    }
+    .Btn:hover .BG {
+        transform: scale(1.5);
+        /* transform-origin: bottom; */
+        font-size: 20px;
+        color: white;
+    }
+
+    .Btn:hover .svgContainer {
+        border: 1px solid rgba(216, 216, 216, 0.466);
+        background-color: rgba(209, 209, 209, 0.466);
+        backdrop-filter: blur(4px);
+    }
+
 
     /* NAME SECTION */
     #name {
@@ -642,7 +731,7 @@ html, body {
     }
 
     #name h1 {
-        font-size: 10vw;
+        font-size: 15vw;
     }
 
     .spinner {
@@ -1828,6 +1917,7 @@ html, body {
     }
 
 }
+
 
 @media all and (max-width: 480px) {
 

@@ -2289,16 +2289,16 @@ html, body {
     color: white;
 }
 
-.wrapper {
+.wrapper{
     display: inline-flex;
     list-style: none;
     height: 120px;
+    width: fit-content;
     padding-top: 40px;
     font-family: "Poppins", sans-serif;
     justify-content: center;
     flex-direction: row;
-    gap: 30px;
-    align-self: center;
+    align-items: center;
 }
 
 .wrapper .icon {
@@ -2306,8 +2306,8 @@ html, body {
     background: #fff;
     border-radius: 50%;
     margin: 10px;
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
     font-size: 18px;
     display: flex;
     justify-content: center;
@@ -2486,6 +2486,7 @@ html, body {
         gap: 8px;
         padding-top: 20px;
         padding-left: 0;
+        flex-wrap: wrap;
     }
 
     .wrapper .icon {
@@ -2566,7 +2567,6 @@ html, body {
     }
 
     .wrapper {
-        flex-wrap: wrap;
         justify-content: center;
         gap: 10px;
         margin-bottom: 10px;

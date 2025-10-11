@@ -2200,8 +2200,8 @@ html, body {
     background: #fff;
     border-radius: 50%;
     margin: 10px;
-    width: clamp(50px, 6vw, 70px);
-    height: clamp(50px, 6vw, 70px);
+    width: 45px;
+    height: 45px;
     font-size: 18px;
     display: flex;
     justify-content: center;

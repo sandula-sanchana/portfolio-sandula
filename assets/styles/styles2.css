@@ -1750,35 +1750,85 @@ html, body {
 
 /*gallery styles starts over here*/
 @media all and (min-width: 481px) and (max-width: 1024px) {
-
     .gallery-grid-wrapper {
-        gap: 30px;
-        margin: 30px;
-        padding: 15px;
+        margin: 0 !important;
+        gap: 40px!important;
+        display: flex;
+        padding-top: 40px;
+
     }
 
     .gallery-row,
     .gallery-row-3-parts,
-    .gallery-row-2-parts {
+    .gallery-row-2-parts,
+    #g1,
+    #g2 {
         flex-direction: column;
+        /*align-items: center;*/
+        align-items: end;
+        gap: 20px;
+    }
+    .gallery-row-3-parts {
+        flex-direction: row;
+        overflow-x: auto;
+        overflow-y: hidden;
+        gap: 20px;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 10px;
+        justify-content: flex-start;
         align-items: center;
-        gap: 30px;
+        scroll-behavior: smooth;
+    }
+
+
+    .gallery-row-3-parts div {
+        flex: 0 0 80%;
+        max-width: none;
+        height: 300px;
+        transform: none !important;
+        scroll-snap-align: center;
+    }
+
+    .gallery-row-3-parts::-webkit-scrollbar {
+        display: none;
     }
 
     #g1 > div,
     #g2 > div,
     .gallery-row-3-parts div {
-        max-width: 80%;
+        width: 100%;
+        max-width: 100%;
         height: auto;
         aspect-ratio: 4/3;
     }
+    #g2 > div:nth-child(1),
+    #g2 > div:nth-child(2) {
+        display: none;
+    }
+
+    #g1 > div:nth-child(1),
+    #g1 > div:nth-child(2) {
+        display: none;
+    }
+
+    .gallery-row-2-parts {
+        overflow: hidden !important;
+        max-height: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .gallery-row-3-parts{
+        height: fit-content !important;
+    }
+
 
     #gallery_name h3 {
-        font-size: 40px;
+        font-size: 28px;
     }
+
 }
 
-/* 📱 Small devices (phones) */
 @media all and (max-width: 480px) {
 
     .gallery-grid-wrapper {
@@ -1973,6 +2023,14 @@ html, body {
     position: relative;
     overflow: hidden;
 }
+
+/*these images are hidden first row on lap version*/
+@media all and (min-width: 1025px){
+    #i5,#i6,#i7{
+        display: none;
+    }
+}
+
 
 /*contact css starts here*/
 

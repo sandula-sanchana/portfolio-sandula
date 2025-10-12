@@ -2277,6 +2277,10 @@ html, body {
     #i5,#i6,#i7{
         display: none;
     }
+
+    .box{
+        display: none;
+    }
 }
 
 

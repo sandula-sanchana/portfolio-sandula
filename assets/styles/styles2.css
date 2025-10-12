@@ -200,7 +200,6 @@ header.hide {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(120deg, transparent, var(--accent), transparent);
     transition: 0.5s;
 }
 
@@ -210,7 +209,7 @@ header.hide {
 
 .menu-items li a:hover {
     background: rgba(255, 110, 199, 0.15);
-    color: var(--accent-glow);
+    color: white;
     text-shadow: 0 0 5px var(--accent-glow);
     letter-spacing: 1px;
     box-shadow: 0 0 20px rgba(255, 110, 199, 0.3);
@@ -228,6 +227,12 @@ header.hide {
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
+}
+
+@media all and (min-width: 1025px) {
+    .toggle2 {
+        display: none;
+    }
 }
 
 footer{
@@ -2680,6 +2685,78 @@ html, body {
         width: 80%;
     }
 }
+
+/*#backToTopWrapper{*/
+/*    display: flex;*/
+/*    flex-direction: row-reverse;*/
+/*    padding: 20px;*/
+/*    position: relative;*/
+/*    width: 80%;*/
+/*    height: 50px;*/
+/*    margin: 40px;*/
+/*}*/
+
+.buttonTop {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: rgb(20, 20, 20);
+    border: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 0 4px rgba(180, 160, 255, 0.253);
+    cursor: pointer;
+    transition-duration: 0.3s;
+    overflow: hidden;
+
+    position: fixed;
+    bottom: 40px;   /* distance from bottom */
+    right: 60px;    /* distance from right */
+    z-index: 9999;  /* ensure it's on top */
+}
+
+.svgIcon {
+    width: 12px;
+    transition-duration: 0.3s;
+}
+
+.svgIcon path {
+    fill: white;
+}
+
+.buttonTop:hover {
+    width: 140px;
+    border-radius: 50px;
+    transition-duration: 0.3s;
+    background-color: rgb(181, 160, 255);
+    align-items: center;
+}
+
+.buttonTop:hover .svgIcon {
+    /* width: 20px; */
+    transition-duration: 0.3s;
+    transform: translateY(-200%);
+}
+
+.buttonTop::before {
+    position: absolute;
+    bottom: -20px;
+    content: "Back to Top";
+    color: white;
+    /* transition-duration: .3s; */
+    font-size: 0px;
+}
+
+.buttonTop:hover::before {
+    font-size: 13px;
+    opacity: 1;
+    bottom: unset;
+    /* transform: translateY(-30px); */
+    transition-duration: 0.3s;
+}
+
 
 
 

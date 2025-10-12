@@ -2686,16 +2686,6 @@ html, body {
     }
 }
 
-/*#backToTopWrapper{*/
-/*    display: flex;*/
-/*    flex-direction: row-reverse;*/
-/*    padding: 20px;*/
-/*    position: relative;*/
-/*    width: 80%;*/
-/*    height: 50px;*/
-/*    margin: 40px;*/
-/*}*/
-
 .buttonTop {
     width: 70px;
     height: 70px;
@@ -2755,6 +2745,13 @@ html, body {
     bottom: unset;
     /* transform: translateY(-30px); */
     transition-duration: 0.3s;
+}
+
+@media all and (max-width: 480px){
+    .buttonTop{
+        right: 20px;
+        bottom: 20px;
+    }
 }
 
 

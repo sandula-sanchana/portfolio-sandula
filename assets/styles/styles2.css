@@ -1233,7 +1233,7 @@ html, body {
 
     .container {
         display: flex;
-        margin: 10px;
+        margin: 10px 10px 0 10px;
         padding: 2rem;
         gap: 2rem;
         position: relative;
@@ -1739,6 +1739,19 @@ html, body {
     transform: translateY(20px);
     animation: fadeUp 1s ease forwards;
     animation-delay: 1s;
+}
+
+#skills_p {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+#skills_p p {
+    font-size: clamp(0.9rem, 2vw, 1.5rem);
+    line-height: 1.6;
+    text-align: center;
+    word-wrap: break-word;
 }
 
 @keyframes fadeUp {

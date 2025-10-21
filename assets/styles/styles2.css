@@ -2854,16 +2854,25 @@ footer>section{
 
 #footer_wrapper div:nth-child(2){
     height: fit-content;
+    display:block;
 }
 
-#footer_wrapper div:nth-child(2)>span{
+#footer_wrapper div:nth-child(2) p{
     font-size: 300px;
     font-family: "JetBrains Mono", monospace;
     font-weight: bold;
     margin: 0;
+    gap: 40px;
 }
 
-#footer_wrapper div:nth-child(2)>span p{
+#middle_card {
+    width: 200px;
+    height: 100px;
+    background: #1a1e26;
+    border-radius: 10px;
+}
+
+#footer_wrapper div:nth-child(2) p{
     margin: 0;
 }
 

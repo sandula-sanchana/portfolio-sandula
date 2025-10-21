@@ -2840,7 +2840,7 @@ footer>section{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 40px;
+    margin-bottom: clamp(20px, 5vw, 40px);
 }
 
 #footer_wrapper{
@@ -2848,28 +2848,22 @@ footer>section{
     width: 100%;
     height: fit-content;
     background: white;
-    margin-top: 100px;
+    margin-top: clamp(50px, 10vw, 100px);
     flex-direction: column;
 }
 
 #footer_wrapper div:nth-child(2){
     height: fit-content;
     display:block;
+    margin-left: clamp(10px, 4vw, 30px);
 }
 
 #footer_wrapper div:nth-child(2) p{
-    font-size: 300px;
+    font-size: clamp(60px, 15vw, 300px);
     font-family: "JetBrains Mono", monospace;
     font-weight: bold;
     margin: 0;
-    gap: 40px;
-}
-
-#middle_card {
-    width: 200px;
-    height: 100px;
-    background: #1a1e26;
-    border-radius: 10px;
+    gap: clamp(10px, 5vw, 40px);
 }
 
 #footer_wrapper div:nth-child(2) p{
@@ -2877,7 +2871,7 @@ footer>section{
 }
 
 #footer_wrapper div:nth-child(1)>span{
-    font-size: 30px;
+    font-size: clamp(14px, 2vw, 30px);
     font-family: "JetBrains Mono", monospace;
 }
 
@@ -2885,17 +2879,17 @@ footer>section{
     display: flex;
     height: fit-content;
     justify-content: space-between;
-    padding: 0 30px;
-    margin-top: 20px;
+    padding: 0 clamp(10px, 4vw, 30px);
+    margin-top: clamp(10px, 3vw, 20px);
 }
 
 #footer_wrapper div:nth-child(3){
-    margin-left: 30px;
+    margin-left: clamp(10px, 4vw, 30px);
     height: fit-content;
 }
 
 #footer_wrapper div:nth-child(3)>span{
-    font-size: 20px;
+    font-size: clamp(12px, 1.5vw, 20px);
     font-family: "JetBrains Mono", monospace;
 }
 

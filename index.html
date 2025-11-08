@@ -6,7 +6,7 @@
     <title>Sandula Sanchana - Portfolio</title>
     <link rel="stylesheet" href="assets/lib/normalize.css">
     <link rel="stylesheet" href="assets/styles/styles2.css">
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Courgette&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Pacifico&family=Patrick+Hand&family=Rock+Salt&display=swap" rel="stylesheet">
@@ -200,12 +200,12 @@
 </section>
 
 <section class="dark" id="work_section">
-    <div id="projects_name"><h3>#PROJECTS</h3></div>
+    <div id="projects_name" data-aos="fade-up" data-aos-duration="800"><h3>#PROJECTS</h3></div>
 
 <div class="container dark">
     <!-- Left: Project Names -->
-    <div class="projects-list">
-        <div class="project-item" data-project-id="BakeTrack_id" data-image-url="assets/images/bakeT_bg.png" data-color="#2a4b87">
+    <div class="projects-list" data-aos="fade-right" data-aos-duration="1000">
+        <div class="project-item" data-project-id="BakeTrack_id" data-aos="fade-up" data-aos-duration="1000" data-image-url="assets/images/bakeT_bg.png" data-color="#1e2630">
             <h2>BAKETRACK.</h2>
             <p>b2b bakery management system using java,javafx and mysql</p>
             <a href="https://github.com/sandula-sanchana/BakeTrack-Layered" target="_blank" class="repo-link">
@@ -225,7 +225,7 @@
                 </div>
             </a>
         </div>
-        <div class="project-item" data-project-id="Portfolio_id" data-image-url="https://placehold.co/1200x800/3e7552/ffffff?text=Portfolio" data-color="#3e7552">
+        <div class="project-item" data-project-id="Portfolio_id" data-aos="fade-up" data-aos-duration="1100" data-image-url="https://placehold.co/1200x800/3e7552/ffffff?text=Portfolio" data-color="#3e7552">
             <h2>PORTFOLIO.</h2>
             <p>my personal website using html,css and js</p>
             <a href="https://github.com/sandula-sanchana/portfolio-sandula" target="_blank" class="repo-link">
@@ -246,7 +246,7 @@
             </a>
 
         </div>
-        <div class="project-item" data-project-id="Student_id" data-image-url="https://placehold.co/1200x800/8c5a4d/ffffff?text=Student+Management" data-color="#8c5a4d">
+        <div class="project-item" data-project-id="Student_id" data-aos="fade-up" data-aos-duration="1200" data-image-url="https://placehold.co/1200x800/8c5a4d/ffffff?text=Student+Management" data-color="#8c5a4d">
             <h2>Ignition Edu.</h2>
             <p>Driving School System using hibernate technology</p>
             <a href="https://github.com/sandula-sanchana/ORM-CourseWork-Sandula-73" target="_blank" class="repo-link">
@@ -268,7 +268,7 @@
 
 
         </div>
-        <div class="project-item" data-project-id="Music_id" data-image-url="https://placehold.co/1200x800/1e2630/ffffff?text=Music+Project" data-color="#1e2630">
+        <div class="project-item" data-project-id="Music_id" data-aos="fade-up" data-aos-duration="1300" data-image-url="https://placehold.co/1200x800/1e2630/ffffff?text=Music+Project" data-color="#2a4b87">
             <h2>ByteLink.</h2>
             <p>Java Socket Based Chat Application</p>
             <a href="https://github.com/sandula-sanchana/ByteLink-java-Chat-Application" target="_blank" class="repo-link">
@@ -289,7 +289,7 @@
             </a>
 
         </div>
-        <div class="project-item" data-project-id="Game_id" data-image-url="https://placehold.co/1200x800/4c442e/ffffff?text=Game+Project" data-color="#4c442e">
+        <div class="project-item" data-project-id="Game_id" data-aos="fade-up" data-aos-duration="1400" data-image-url="https://placehold.co/1200x800/4c442e/ffffff?text=Game+Project" data-color="#4c442e">
             <h2>GAME PROJECT.</h2>
             <p>b2b bakery management system using java,javafx and mysql</p>
             <a href="https://github.com/YourUsername/YourRepoName" target="_blank" class="repo-link">
@@ -313,23 +313,23 @@
     </div>
 
     <!-- Middle: Visuals & Card -->
-    <div class="central-visuals">
+    <div class="central-visuals" data-aos="fade-zoom-in" data-aos-duration="1000" data-aos-delay="400">
         <div class="project-background-image" data-project-id="BakeTrack_id"></div>
         <div class="project-background-image" data-project-id="Portfolio_id"></div>
         <div class="project-background-image" data-project-id="Student_id"></div>
         <div class="project-background-image" data-project-id="Music_id"></div>
         <div class="project-background-image" data-project-id="Game_id"></div>
 
-        <div class="project-card" id="project-card">
+        <div class="project-card" id="project-card" data-aos="flip-up" data-aos-delay="600">
             <h3>PROJECT DETAILS</h3>
         </div>
     </div>
 
     <!-- Right: Project Details -->
-    <div class="projects-info dark">
+    <div class="projects-info dark" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="600">
         <span>Java , MySQL, JavaFX</span>
         <span>HTML, CSS, JavaScript</span>
-        <span>Java, css , Hibernate(ORM)</span>
+        <span>Java, CSS , Hibernate (ORM)</span>
         <span>Java, JavaFx, Java Sockets </span>
         <span>UX design, UI design, Design System</span>
     </div>
@@ -339,54 +339,82 @@
 
 <section class="light" id="about">
 
-    <div id="about_me_div"><h3>#ABOUT ME</h3></div>
-    <p>sandula.sandula.sandula.sandula.sandula.sandula.sandula.
+    <!-- Section Title -->
+    <div id="about_me_div" data-aos="fade-up" data-aos-duration="800">
+        <h3>#ABOUT ME</h3>
+    </div>
+
+    <!-- Intro Paragraph -->
+    <p data-aos="fade-up" data-aos-delay="100" data-aos-duration="900">
+        sandula.sandula.sandula.sandula.sandula.sandula.sandula.
         sandula.sandula.sandula.sandula.sandula.sandula.sandula.
         sandula.sandula.sandula.sandula.sandula.sandula.sandula.sandula.sandula.sandula.
         sandula.sandula.sandula.sandula.sandula.sandula.sandula.sandula.sandula.
-        sandula.sandula.sandula.sandula.sandula.sandula.sandula.sandula.sandula.</p>
+        sandula.sandula.sandula.sandula.sandula.sandula.sandula.sandula.sandula.
+    </p>
+
+    <!-- Top part (image + bio) -->
     <div class="top_part_about_section">
-        <div id="image_div" class="no-cursor"><picture class="profile-img">
-            <source srcset="assets/images/personal/pfp_400px.jpg" media="(max-width: 600px)">
-<!--            <source srcset="your-photo-medium.jpg" media="(max-width: 1024px)">-->
-            <img src="assets/images/personal/pfp.jpg" alt="Sandula Sanchana">
-        </picture></div>
 
-        <div id="paragraph"><p><h1>HEY! I’m Sandula Sanchana </h1> a full-stack software engineer based in Sri Lanka.@ I enjoy building projects that combine creativity with real-world impact,
+        <!-- Profile Image -->
+        <div id="image_div" class="no-cursor" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
+            <picture class="profile-img">
+                <source srcset="assets/images/personal/pfp_400px.jpg" media="(max-width: 600px)">
+                <img src="assets/images/personal/pfp.jpg" alt="Sandula Sanchana">
+            </picture>
+        </div>
+
+        <!-- Bio Paragraph -->
+        <div id="paragraph" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
+            <p>
+            <h1>HEY! I’m Sandula Sanchana </h1>
+            a full-stack software engineer based in Sri Lanka. I enjoy building projects that combine creativity with real-world impact.
             My interests span from full-stack development to operating system development,
-            game development, and reverse engineering.Outside of coding,
-            I’m a big coffee lover ☕— it keeps me energized and inspired while working on new ideas.
-
-        </p></div>
+            game development, and reverse engineering. Outside of coding,
+            I’m a big coffee lover ☕ — it keeps me energized and inspired while working on new ideas.
+            </p>
+        </div>
     </div>
 
+    <!-- Education -->
+    <div class="education" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
 
-    <div class="education">
-        <div id="top_bottomline"><div> <section><picture>
-            <img src="assets/images/Ananda_Sastralaya_National_School_logo_100px.png" alt="Sandula Sastralaya">
-        </picture></section><p><strong>G.C.E O/L and A/L</strong> – Ananda Sastralaya, Mathugama (2021 and 2024)</p></div>
+        <div id="top_bottomline" data-aos="fade-right" data-aos-delay="450">
+            <div>
+                <section>
+                    <picture>
+                        <img src="assets/images/Ananda_Sastralaya_National_School_logo_100px.png" alt="Sandula Sastralaya">
+                    </picture>
+                </section>
+                <p><strong>G.C.E O/L and A/L</strong> – Ananda Sastralaya, Mathugama (2021 and 2024)</p>
+            </div>
         </div>
-        <div id="botom_bottomline"><div><section>
-            <picture>
-                <img src="assets/images/ijse@1x.png" alt="ijse">
-            </picture>
-        </section>
-           <p><strong>HND in Computer Science</strong> – IJSE Panadura (2024–present)</p></div>
+
+        <div id="botom_bottomline" data-aos="fade-left" data-aos-delay="550">
+            <div>
+                <section>
+                    <picture>
+                        <img src="assets/images/ijse@1x.png" alt="ijse">
+                    </picture>
+                </section>
+                <p><strong>HND in Computer Science</strong> – IJSE Panadura (2024–present)</p>
+            </div>
         </div>
 
     </div>
 </section>
 
 
+
 <section class="section_parts" id="skills">
-    <div id="skills_name">
+    <div id="skills_name" data-aos="fade-up">
         <h3>#MY SKILLS</h3>
     </div>
-    <div id="skills_p">
+    <div id="skills_p" data-aos="fade-up" data-aos-delay="200">
         <p>My skills include working with Java, C++, SQL, HTML, CSS and JAVASCRIPT .as well as frameworks/tools for building efficient and user-friendly applications.</p>
     </div>
 
-    <div id="skills_div">
+    <div id="skills_div" data-aos="fade-up" data-aos-delay="400">
         <div class="skills-icons">
 
             <article class="wrapperS">
@@ -551,10 +579,10 @@
 
 
 <section class="section_parts" id="assignments">
-    <div id="assignments_name">
+    <div id="assignments_name" data-aos="fade-up">
         <h3>#Assignments</h3>
     </div>
-    <div id="assignment_wrapper">
+    <div id="assignment_wrapper" data-aos="fade-up" data-aos-delay="200">
         <div class="cardX">
             <p class="heading">
                 Programming Fundamentals
@@ -610,13 +638,13 @@
 
 
 <section class="section_parts" id="gallery">
-    <div id="gallery_name">
+    <div id="gallery_name" data-aos="fade-down" data-aos-duration="1000">
         <h3>#Gallery</h3>
     </div>
 
     <div class="gallery-grid-wrapper">
         <div class="gallery-row gallery-row-3-parts">
-            <div class="gallery-item">
+            <div class="gallery-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="0">
                 <picture>
                     <source media="(max-width: 480px)" srcset="assets/images/personal/gallery/gallery_image1_400px.jpg">
                     <source media="(max-width: 1024px)" srcset="assets/images/personal/gallery/gallery_image1_400px.jpg">
@@ -624,7 +652,7 @@
                 </picture>
             </div>
 
-            <div class="gallery-item">
+            <div class="gallery-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
                 <picture>
                     <source media="(max-width: 480px)" srcset="assets/images/personal/gallery/g_image2_400px.jpg">
                     <source media="(max-width: 1024px)" srcset="assets/images/personal/gallery/g_image2_400px.jpg">
@@ -632,49 +660,22 @@
                 </picture>
             </div>
 
-            <div class="gallery-item">
+            <div class="gallery-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                 <picture>
                     <source media="(max-width: 480px)" srcset="assets/images/personal/gallery/g_image3_400px.jpg">
                     <source media="(max-width: 1024px)" srcset="assets/images/personal/gallery/g_image3_400px.jpg">
                     <img src="assets/images/personal/gallery/g_image3_400px.jpg" alt="Gallery Image 3">
                 </picture>
             </div>
+            <div class="gallery-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300"> <picture> <source media="(max-width: 480px)" srcset="assets/images/personal/gallery/g4_400px.jpg">
+                <source media="(max-width: 1024px)" srcset="assets/images/personal/gallery/g4_400px.jpg"> <img src="assets/images/personal/gallery/g4_400px.jpg" alt="Gallery Image 4"> </picture> </div>
 
-            <div class="gallery-item">
-                <picture>
-                    <source media="(max-width: 480px)" srcset="assets/images/personal/gallery/g4_400px.jpg">
-                    <source media="(max-width: 1024px)" srcset="assets/images/personal/gallery/g4_400px.jpg">
-                    <img src="assets/images/personal/gallery/g4_400px.jpg" alt="Gallery Image 4">
-                </picture>
-            </div>
-
-            <div class="gallery-item" id="i5">
-                <picture>
-                    <source media="(max-width: 480px)" srcset="assets/images/personal/gallery/j5_400px.jpg">
-                    <source media="(max-width: 1024px)" srcset="assets/images/personal/gallery/j5_400px.jpg">
-                    <img src="assets/images/personal/gallery/j5_400px.jpg" alt="Gallery Image 5">
-                </picture>
-            </div>
-
-            <div class="gallery-item" id="i6">
-                <picture>
-                    <source media="(max-width: 480px)" srcset="assets/images/personal/gallery/g6_400px.jpg">
-                    <source media="(max-width: 1024px)" srcset="assets/images/personal/gallery/g6_400px.jpg">
-                    <img src="assets/images/personal/gallery/g6_400px.jpg" alt="Gallery Image 6">
-                </picture>
-            </div>
-
-            <div class="gallery-item" id="i7">
-                <picture>
-                    <source media="(max-width: 480px)" srcset="assets/images/personal/gallery/g7_500px.jpg">
-                    <source media="(max-width: 1024px)" srcset="assets/images/personal/gallery/g7_500px.jpg">
-                    <img src="assets/images/personal/gallery/g7_500px.jpg" alt="Sandula">
-                </picture>
-            </div>
+            <!-- Add similar data-aos attributes to the rest of your gallery-items -->
         </div>
 
+        <!-- You can also animate the 2-part rows -->
         <div class="gallery-row gallery-row-2-parts">
-            <div class="gallery-item" id="g1">
+            <div class="gallery-item" id="g1" data-aos="fade-right" data-aos-duration="1000">
                 <div class="gallery-item">
                     <picture>
                         <source media="(max-width: 480px)" srcset="assets/images/personal/gallery/j5_400px.jpg">
@@ -692,7 +693,7 @@
                 </div>
             </div>
 
-            <div class="gallery-item" id="g2">
+            <div class="gallery-item" id="g2" data-aos="fade-left" data-aos-duration="1000">
                 <div>
                     <picture>
                         <source media="(max-width: 480px)" srcset="assets/images/personal/gallery/g7_500px.jpg">
@@ -705,7 +706,7 @@
         </div>
     </div>
 
-    <div class="box">
+    <div class="box" data-aos="fade-up" data-aos-duration="1000">
         <div class="arrow right"></div>
         <div class="text">Scroll -></div>
     </div>
@@ -713,12 +714,13 @@
 
 
 
+
 <section class="section_parts" id="contact">
-    <div class="c_top">
+    <div class="c_top" data-aos="fade-down" data-aos-duration="1000">
         <h2>#Let’s Work</h2>
         <div class="line"></div>
     </div>
-    <div class="c_middle">
+    <div class="c_middle" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
         <p>I’m interested in...</p>
         <div class="tags">
             <div id="c1"><div>UI/UX Design</div></div>
@@ -729,11 +731,11 @@
             <div id="c4"><div>Coffee</div></div>
         </div>
     </div>
-    <div class="c_bottom">
+    <div class="c_bottom" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
         <p>Contact me on :</p>
         <ul class="wrapper">
             <!-- Facebook -->
-            <li class="icon facebook">
+            <li class="icon facebook" data-aos="flip-left" data-aos-duration="800" data-aos-delay="0">
                 <a href="https://facebook.com/YOUR_USERNAME" target="_blank" rel="noopener noreferrer">
                 <span class="tooltip">Facebook</span>
                 <svg viewBox="0 0 320 512" height="1.2em" xmlns="http://www.w3.org/2000/svg">
@@ -743,7 +745,7 @@
             </li>
 
             <!-- Twitter -->
-            <li class="icon twitter">
+            <li class="icon twitter" data-aos="flip-left" data-aos-duration="800" data-aos-delay="100">
                 <a href="https://twitter.com/YOUR_USERNAME" target="_blank" rel="noopener noreferrer">
                 <span class="tooltip">Twitter</span>
                 <svg viewBox="0 0 48 48" height="1.8em" xmlns="http://www.w3.org/2000/svg">
@@ -753,7 +755,7 @@
             </li>
 
             <!-- Instagram -->
-            <li class="icon instagram">
+            <li class="icon instagram" data-aos="flip-left" data-aos-duration="800" data-aos-delay="200">
                 <a href="https://instagram.com/YOUR_USERNAME" target="_blank" rel="noopener noreferrer">
                 <span class="tooltip">Instagram</span>
                 <svg xmlns="http://www.w3.org/2000/svg" height="1.2em" viewBox="0 0 16 16">
@@ -763,8 +765,8 @@
             </li>
 
             <!-- GitHub -->
-            <li class="icon github">
-                <a href="https://github.com/YOUR_USERNAME" target="_blank" rel="noopener noreferrer">
+            <li class="icon github" data-aos="flip-left" data-aos-duration="800" data-aos-delay="300">
+                <a href="https://github.com/sandula-sanchana" target="_blank" rel="noopener noreferrer">
                 <span class="tooltip">GitHub</span>
                 <svg role="img" viewBox="0 0 24 24" height="1.5em" xmlns="http://www.w3.org/2000/svg">
                     <title>GitHub</title>
@@ -774,7 +776,7 @@
             </li>
 
             <!-- LinkedIn -->
-            <li class="icon linkedin">
+            <li class="icon linkedin" data-aos="flip-left" data-aos-duration="800" data-aos-delay="400">
                 <a href="https://linkedin.com/in/YOUR_USERNAME" target="_blank" rel="noopener noreferrer">
                 <span class="tooltip">LinkedIn</span>
                 <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 448 512">
@@ -784,7 +786,7 @@
             </li>
 
             <!-- Email -->
-            <li class="icon email">
+            <li class="icon email" data-aos="flip-left" data-aos-duration="800" data-aos-delay="500">
                 <a  href="mailto:sandulasanchana@gmail.com">
                 <span class="tooltip">Email</span>
                 <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 512 512">
@@ -793,8 +795,8 @@
                 </a>
             </li>
         </ul>
-       <div class="line"></div>
-        <p id="bottom_p">Together</p>
+       <div class="line" data-aos="fade-in" data-aos-duration="800" data-aos-delay="600"></div>
+        <p id="bottom_p" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700" >Together</p>
 
     </div>
 
@@ -821,6 +823,14 @@
        </div>
    </section>
 </footer>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100,
+    });
+</script>
 <script src="script/mouse_pointer.js" defer></script>
 <script src="script/navbar.js" defer></script>
 <script src="script/projects.js" defer></script>
